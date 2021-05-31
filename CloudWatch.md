@@ -1,12 +1,12 @@
 # CloudWatch ( A monitoring service for AWS Resources)
   It can be used for AWS resources as well as on premises ( You need to install SSM Agent and CloudWatch Agent) 
 ## Major services monitored by cloud watch
-   ### Compute 
-      #### Autoscaling Groups
-	  #### ELB
-	  #### Route53 HealthChecks
-   ### Storage and Content Delivery
-      #### EBS Volumes
+### Compute 
+#### Autoscaling Groups
+#### ELB
+#### Route53 HealthChecks
+### Storage and Content Delivery
+#### EBS Volumes
       #### Storage Gateway
       #### CloudFront
    ### Database & Analytics
