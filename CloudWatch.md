@@ -1,31 +1,31 @@
 # CloudWatch ( A monitoring service for AWS Resources)
   It can be used for AWS resources as well as on premises ( You need to install SSM Agent and CloudWatch Agent) 
 ## Major services monitored by cloud watch
-### Compute 
-#### Autoscaling Groups
-#### ELB
-#### Route53 HealthChecks
-### Storage and Content Delivery
-#### EBS Volumes
-      #### Storage Gateway
-      #### CloudFront
-   ### Database & Analytics
-      #### DynamoDB
-      #### RDS Instances
-      #### Elastic Cache Nodes
-      #### RedShift
-   ### Other Services
-      #### SNS
-      #### SQS Queues
-      #### OpsWorks
-      #### CloudWatch Logs
-      #### Billing
+ ### Compute 
+   #### Autoscaling Groups
+   #### ELB
+   #### Route53 HealthChecks
+ ### Storage and Content Delivery
+  #### EBS Volumes
+  #### Storage Gateway
+  #### CloudFront
+ ### Database & Analytics
+   #### DynamoDB
+   #### RDS Instances
+   #### Elastic Cache Nodes
+   #### RedShift
+ ### Other Services
+   #### SNS
+   #### SQS Queues
+   #### OpsWorks
+   #### CloudWatch Logs
+   #### Billing
 ## EC2 and CloudWatch 
-   ### Host Level Metrics Consist of 
-    #### CPU
-	#### Network
-	#### Disk 
-	#### Status Check
+ ### Host Level Metrics Consist of 
+   #### CPU
+   #### Network
+   #### Disk 
+   #### Status Check
 ### Note :- If there is anything related to Ec2 Host Level we need to monitor then we need to use custom Metrics 
 ###         Eg RAM utilization is  custom metric 
 
