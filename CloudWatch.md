@@ -16,22 +16,32 @@
  </ul>	
  
  ### Database & Analytics
-   #### DynamoDB
-   #### RDS Instances
-   #### Elastic Cache Nodes
-   #### RedShift
+   <ul>
+   
+	<li> DynamoDB </li>
+	<li> RDS Instances </li>
+	<li> Elastic Cache Nodes</li>
+	<li> RedShift </li>
+   </ul>
+   
  ### Other Services
-   #### SNS
-   #### SQS Queues
-   #### OpsWorks
-   #### CloudWatch Logs
-   #### Billing
+   <ul>
+	<li> SNS</li>
+	<li> SQS Queues</li>
+	<li> OpsWorks</li>
+	<li> CloudWatch Logs</li>
+        <li> Billing </li>
+    </ul>
+	    
 ## EC2 and CloudWatch 
  ### Host Level Metrics Consist of 
-   #### CPU
-   #### Network
-   #### Disk 
-   #### Status Check
+   <ul>
+	<li> CPU </li>
+	<li> Network </li>
+	<li> Disk </li>
+	<li> Status Check </li>
+   </ul>
+   
 ### Note :- If there is anything related to Ec2 Host Level we need to monitor then we need to use custom Metrics 
 ###         Eg RAM utilization is  custom metric 
 
@@ -52,8 +62,9 @@
 # Lab
 ## CaseStudey:- Create a Custom Metric for Monitoring EC2 instances Memory utilization and memory use.
 
-#### Create an Ec2 Role ( Lets call it MyCloudWatchRole) with full Access to CloudWatch policy.
-#### Create an Amazon Linux Ec2 instance and attach MyCloudWatchRole cd aws-scripts-mon/. Also attach a security group which has ssh and http open and also use below script in it bootstrap
+<ul>
+<li> Create an Ec2 Role ( Lets call it MyCloudWatchRole) with full Access to CloudWatch policy. </li>
+<li> Create an Amazon Linux Ec2 instance and attach MyCloudWatchRole cd aws-scripts-mon/. Also attach a security group which has ssh and http open and also use below script in it bootstrap </li>
      
 	 #!/bin/bash
 		yum update -y
@@ -62,14 +73,15 @@
 		curl https://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.2.zip -O
 		unzip CloudWatchMonitoringScripts-1.2.2.zip
 		rm -rf CloudWatchMonitoringScripts-1.2.2.zip
-#### Go To Cloudwatch Services and Browse the metrics for Ec2 instalnces ( You will find only PerInstances )
+<li> Go To Cloudwatch Services and Browse the metrics for Ec2 instalnces ( You will find only PerInstances )
 
-#### Connect to ec2 instance and run below commands one by one ( After running 3rd command you will notice that a custom metrics is created for Ec2 service)
+<li> Connect to ec2 instance and run below commands one by one ( After running 3rd command you will notice that a custom metrics is created for Ec2 service) </li>
+	
          cd aws-scripts-mon/
          /home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --verify --verbose
          /home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail		 
 		 #If you want to send the data with some frequency then create a cron job and add below entry in /etc/crontab file and after around 5 mins just check the cloudwatch metrics
 		 */1 * * * * root /home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail
-
+</ul>
 
 		 
