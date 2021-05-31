@@ -2,9 +2,11 @@
   It can be used for AWS resources as well as on premises ( You need to install SSM Agent and CloudWatch Agent) 
 ## Major services monitored by cloud watch
  ### Compute 
-   #### Autoscaling Groups
-   #### ELB
-   #### Route53 HealthChecks
+  <ul>
+   <li> Autoscaling Groups</li>
+   <li> ELB </li>
+   <li> Route53 HealthChecks </li>
+  </ul>	
  ### Storage and Content Delivery
   #### EBS Volumes
   #### Storage Gateway
