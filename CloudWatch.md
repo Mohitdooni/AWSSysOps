@@ -7,10 +7,14 @@
    <li> ELB </li>
    <li> Route53 HealthChecks </li>
   </ul>	
+ 
  ### Storage and Content Delivery
-  #### EBS Volumes
-  #### Storage Gateway
-  #### CloudFront
+  <ul>
+	<li>EBS Volumes</li>
+	<li>Storage Gateway</li>
+	<li> CloudFront</li>
+ </ul>	
+ 
  ### Database & Analytics
    #### DynamoDB
    #### RDS Instances
