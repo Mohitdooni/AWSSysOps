@@ -66,7 +66,7 @@
 <li> Create an Ec2 Role ( Lets call it MyCloudWatchRole) with full Access to CloudWatch policy. </li>
 <li> Create an Amazon Linux Ec2 instance and attach MyCloudWatchRole cd aws-scripts-mon/. Also attach a security group which has ssh and http open and also use below script in it bootstrap </li>
      
-	 #!/bin/bash
+	        #!/bin/bash
 		yum update -y
 		sudo yum install -y perl-Switch perl-DateTime perl-Sys-Syslog perl-LWP-Protocol-https perl-Digest-SHA.x86_64
 		cd /home/ec2-user/
@@ -80,7 +80,7 @@
          cd aws-scripts-mon/
          /home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --verify --verbose
          /home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail		 
-		 #If you want to send the data with some frequency then create a cron job and add below entry in /etc/crontab file and after around 5 mins just check the cloudwatch metrics
+	 #If you want to send the data with some frequency then create a cron job and add below entry in /etc/crontab file and after around 5 mins just check the cloudwatch metrics
 		 */1 * * * * root /home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail
 </ul>
 
